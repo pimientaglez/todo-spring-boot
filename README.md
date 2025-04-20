@@ -19,13 +19,14 @@ A simple and extensible Todo application built using **Spring Boot** and **Postg
 
 ## 🧪 API Endpoints
 
-| Method | Endpoint          | Description          |
-| ------ | ----------------- | -------------------- |
-| GET    | `/api/tasks`      | Get all tasks        |
-| GET    | `/api/tasks/{id}` | Get task by ID       |
-| POST   | `/api/tasks`      | Create a new task    |
-| PUT    | `/api/tasks/{id}` | Update existing task |
-| DELETE | `/api/tasks/{id}` | Delete task by ID    |
+| Method | Endpoint                             | Description          |
+| ------ | ------------------------------------ | -------------------- |
+| GET    | `/api/tasks`                         | Get all tasks        |
+| GET    | `/api/tasks/{id}`                    | Get task by ID       |
+| POST   | `/api/tasks`                         | Create a new task    |
+| PUT    | `/api/tasks/{id}`                    | Update existing task |
+| DELETE | `/api/tasks/{id}`                    | Delete task by ID    |
+| GET    | `/api/tasks/by-status?status=STATUS` | Get all by status    |
 
 ## ⚙️ Getting Started
 
