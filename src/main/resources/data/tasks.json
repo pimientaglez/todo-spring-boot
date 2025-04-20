@@ -1,0 +1,104 @@
+{
+  "tasks": [
+    {
+      "title": "Complete React project setup",
+      "status": "ARCHIVED",
+      "version": 0
+    },
+    {
+      "title": "Review the latest sprint report",
+      "status": "PENDING",
+      "version": 0
+    },
+    {
+      "title": "Write unit tests for task repository",
+      "status": "COMPLETED",
+      "version": 0
+    },
+    {
+      "title": "Implement user authentication",
+      "status": "COMPLETED",
+      "version": 0
+    },
+    {
+      "title": "Fix UI bugs on mobile version",
+      "status": "COMPLETED",
+      "version": 0
+    },
+    {
+      "title": "Add documentation for API endpoints",
+      "status": "COMPLETED",
+      "version": 0
+    },
+    {
+      "title": "Refactor code to follow SOLID principles",
+      "status": "PENDING",
+      "version": 0
+    },
+    {
+      "title": "Prepare database migration for version 2",
+      "status": "COMPLETED",
+      "version": 0
+    },
+    {
+      "title": "Conduct peer review for new feature branch",
+      "status": "ARCHIVED",
+      "version": 0
+    },
+    {
+      "title": "Setup Docker containers for local development",
+      "status": "PENDING",
+      "version": 0
+    },
+    {
+      "title": "Integrate Stripe payment gateway",
+      "status": "COMPLETED",
+      "version": 0
+    },
+    {
+      "title": "Create design for the new landing page",
+      "status": "PENDING",
+      "version": 0
+    },
+    {
+      "title": "Fix bug in task filtering logic",
+      "status": "PENDING",
+      "version": 0
+    },
+    {
+      "title": "Update dependencies in backend project",
+      "status": "ARCHIVED",
+      "version": 0
+    },
+    {
+      "title": "Write documentation for API testing",
+      "status": "PENDING",
+      "version": 0
+    },
+    {
+      "title": "Create wireframes for new feature",
+      "status": "PENDING",
+      "version": 0
+    },
+    {
+      "title": "Set up monitoring for production environment",
+      "status": "COMPLETED",
+      "version": 0
+    },
+    {
+      "title": "Plan and schedule sprint retrospective meeting",
+      "status": "ARCHIVED",
+      "version": 0
+    },
+    {
+      "title": "Investigate performance issue on user dashboard",
+      "status": "PENDING",
+      "version": 0
+    },
+    {
+      "title": "Test new feature in staging environment",
+      "status": "ARCHIVED",
+      "version": 0
+    }
+  ]
+}
