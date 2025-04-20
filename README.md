@@ -35,3 +35,17 @@ A simple and extensible Todo application built using **Spring Boot** and **Postg
 git clone https://github.com/yourusername/todo-app-springboot.git
 cd todo-app-springboot
 ```
+
+### 1. Create `docker-compose.yml`
+
+```yaml
+services:
+  postgres:
+    image: "postgres:latest"
+    environment:
+      - "POSTGRES_DB=todo"
+      - "POSTGRES_PASSWORD=pass"
+      - "POSTGRES_USER=ricardo"
+    ports:
+      - "5432"
+```
