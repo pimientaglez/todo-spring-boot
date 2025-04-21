@@ -26,7 +26,7 @@ public class JdbcTaskRepository implements TaskRepository {
     }
 
     public List<Task> findAll() {
-        return jdbcClient.sql("select * from task")
+        return jdbcClient.sql("select * from task ORDER BY id ASC")
                 .query(Task.class)
                 .list();
     }
