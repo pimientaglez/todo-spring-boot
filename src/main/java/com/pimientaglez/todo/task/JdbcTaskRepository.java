@@ -1,6 +1,7 @@
 package com.pimientaglez.todo.task;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -56,12 +57,13 @@ public class JdbcTaskRepository implements TaskRepository {
         );
     }
 
-    public void update(Task task, Integer id) {
-        var updated = jdbcClient.sql("update task set title = ?, status = ?, complete_date = ?, priority = ? where id = ?")
-                .params(List.of(task.title(),task.status().toString(), task.completeDate(),task.priority().toString(), id))
+    public Task update(Task task, Integer id) {
+        int rowsAffected = jdbcClient.sql("update task set title = ?, status = ?, complete_date = ?, priority = ? where id = ?")
+                .params(Arrays.asList(task.title(),task.status().toString(), task.completeDate(),task.priority().toString(), id))
                 .update();
 
-        Assert.state(updated == 1, "Failed to update task " + task.title());
+        Assert.state(rowsAffected == 1, "Failed to update task " + task.title());
+        return task;
     }
 
     public void delete(Task task) {

@@ -39,10 +39,10 @@ class TaskController {
         return Task;
     }
 
-    @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
-    void update(@Valid @RequestBody Task Task, @PathVariable Integer id) {
-        TaskRepository.update(Task,id);
+    Task update(@Valid @RequestBody Task Task, @PathVariable Integer id) {
+        Task Updated =TaskRepository.update(Task,id);
+        return Updated;
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
