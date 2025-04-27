@@ -5,7 +5,7 @@ A simple and extensible Todo application built using **Spring Boot** and **Postg
 ## 🚀 Features
 
 - ✅ Create, read, update, and delete (CRUD) tasks
-- 📋 Filter tasks by status (`pending`, `completed`)
+- 📋 Filter tasks by status (`pending`, `completed`, `archived`) and by priority (`low`, `medium`, `high`)
 - 🗃️ PostgreSQL as the persistent storage
 - 📦 RESTful API following best practices
 
@@ -19,14 +19,15 @@ A simple and extensible Todo application built using **Spring Boot** and **Postg
 
 ## 🧪 API Endpoints
 
-| Method | Endpoint                             | Description          |
-| ------ | ------------------------------------ | -------------------- |
-| GET    | `/api/tasks`                         | Get all tasks        |
-| GET    | `/api/tasks/{id}`                    | Get task by ID       |
-| POST   | `/api/tasks`                         | Create a new task    |
-| PUT    | `/api/tasks/{id}`                    | Update existing task |
-| DELETE | `/api/tasks/{id}`                    | Delete task by ID    |
-| GET    | `/api/tasks/by-status?status=STATUS` | Get all by status    |
+| Method | Endpoint                                   | Description          |
+| ------ | ------------------------------------------ | -------------------- |
+| GET    | `/api/tasks`                               | Get all tasks        |
+| GET    | `/api/tasks/{id}`                          | Get task by ID       |
+| POST   | `/api/tasks`                               | Create a new task    |
+| PUT    | `/api/tasks/{id}`                          | Update existing task |
+| DELETE | `/api/tasks/{id}`                          | Delete task by ID    |
+| GET    | `/api/tasks/by-status?status=STATUS`       | Get all by status    |
+| GET    | `/api/tasks/by-priority?priority=PRIORITY` | Get all by priority  |
 
 ## ⚙️ Getting Started
 
