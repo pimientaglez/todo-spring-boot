@@ -32,24 +32,33 @@ public class JdbcTaskRepository implements TaskRepository {
     }
 
     public Optional<Task> findById(Integer id) {
-        return jdbcClient.sql("SELECT id,title,status,version FROM Task WHERE id = :id" )
+        return jdbcClient.sql("SELECT * version FROM Task WHERE id = :id" )
                 .param("id", id)
                 .query(Task.class)
                 .optional();
     }
 
-    public void create(Task task) {
-        var updated = jdbcClient.sql("INSERT INTO Task(title,status) values(?,?) RETURNING id")
-                .params(List.of(task.title(),task.status().toString()))
+    public Task create(Task task) {
+        Integer newId = jdbcClient.sql("INSERT INTO Task(title,status,create_date,priority) values(?,?,?,?) RETURNING id")
+                .params(List.of(task.title(),task.status().toString(), task.createDate(),task.priority().toString()))
                 .query(Integer.class)
                 .single();
 
-        Assert.notNull(updated, "Failed to retrieve generated ID for Task: " + task.title());
+        Assert.notNull(newId, "Failed to retrieve generated ID for Task: " + task.title());
+        return new Task(
+            newId,
+            task.title(),
+            task.status(),
+            task.version(),
+            task.createDate(),
+            task.completeDate(),
+            task.priority()
+        );
     }
 
     public void update(Task task, Integer id) {
-        var updated = jdbcClient.sql("update task set title = ?, status = ? where id = ?")
-                .params(List.of(task.title(),task.status().toString(), id))
+        var updated = jdbcClient.sql("update task set title = ?, status = ?, complete_date = ?, priority = ? where id = ?")
+                .params(List.of(task.title(),task.status().toString(), task.completeDate(),task.priority().toString(), id))
                 .update();
 
         Assert.state(updated == 1, "Failed to update task " + task.title());

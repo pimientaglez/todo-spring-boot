@@ -34,8 +34,9 @@ class TaskController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    void create(@Valid @RequestBody Task task) {
-        TaskRepository.create(task);
+    Task create(@Valid @RequestBody Task task) {
+        Task Task = TaskRepository.create(task);
+        return Task;
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
