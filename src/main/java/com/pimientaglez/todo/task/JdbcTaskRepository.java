@@ -33,15 +33,15 @@ public class JdbcTaskRepository implements TaskRepository {
     }
 
     public Optional<Task> findById(Integer id) {
-        return jdbcClient.sql("SELECT * version FROM Task WHERE id = :id" )
+        return jdbcClient.sql("SELECT * FROM Task WHERE id = :id" )
                 .param("id", id)
                 .query(Task.class)
                 .optional();
     }
 
     public Task create(Task task) {
-        Integer newId = jdbcClient.sql("INSERT INTO Task(title,status,create_date,priority) values(?,?,?,?) RETURNING id")
-                .params(List.of(task.title(),task.status().toString(), task.createDate(),task.priority().toString()))
+        Integer newId = jdbcClient.sql("INSERT INTO Task(title,status,create_date,promise_date,priority) values(?,?,?,?,?) RETURNING id")
+                .params(List.of(task.title(),task.status().toString(), task.createDate(),task.promiseDate(),task.priority().toString()))
                 .query(Integer.class)
                 .single();
 
@@ -53,13 +53,14 @@ public class JdbcTaskRepository implements TaskRepository {
             task.version(),
             task.createDate(),
             task.completeDate(),
+            task.promiseDate(),
             task.priority()
         );
     }
 
     public Task update(Task task, Integer id) {
-        int rowsAffected = jdbcClient.sql("update task set title = ?, status = ?, complete_date = ?, priority = ? where id = ?")
-                .params(Arrays.asList(task.title(),task.status().toString(), task.completeDate(),task.priority().toString(), id))
+        int rowsAffected = jdbcClient.sql("update task set title = ?, status = ?, complete_date = ?, promise_date = ?, priority = ? where id = ?")
+                .params(Arrays.asList(task.title(),task.status().toString(), task.completeDate(), task.promiseDate(),task.priority().toString(), id))
                 .update();
 
         Assert.state(rowsAffected == 1, "Failed to update task " + task.title());

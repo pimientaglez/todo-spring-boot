@@ -24,16 +24,17 @@ public class TasksJsonLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        if(taskRepository.count() == 0) {
+        /* if(taskRepository.count() == 0) {
             try (InputStream inputStream = TypeReference.class.getResourceAsStream("/data/tasks.json")) {
                 Tasks allTasks = objectMapper.readValue(inputStream, Tasks.class);
-                log.info("Reading {} tasks from JSON data and saving to in-memory collection.", allTasks.tasks().size());
+                allTasks.tasks().stream().findFirst();
+                log.info("Reading {} tasks from JSON data and saving to in-memory collection.", allTasks.tasks().stream().findFirst());
                 taskRepository.saveAll(allTasks.tasks());
             } catch (IOException e) {
                 throw new RuntimeException("Failed to read JSON data", e);
             }
         } else {
             log.info("Not loading Tasks from JSON data because the collection contains data.");
-        }
+        } */
     }
 }

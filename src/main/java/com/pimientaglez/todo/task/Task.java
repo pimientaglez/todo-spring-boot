@@ -1,13 +1,13 @@
-    package com.pimientaglez.todo.task;
+package com.pimientaglez.todo.task;
 
 
-    import java.time.LocalDateTime;
+import java.time.LocalDateTime;
 
-    import org.springframework.data.annotation.Id;
-    import org.springframework.data.annotation.Version;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Version;
 
-    import jakarta.validation.constraints.NotEmpty;
-    import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 
     public record Task (
         @Id
@@ -21,6 +21,8 @@
         @NotNull
         LocalDateTime createDate,
         LocalDateTime completeDate,
+        @NotNull
+        LocalDateTime promiseDate,
         @NotNull
         Priority priority
     ){

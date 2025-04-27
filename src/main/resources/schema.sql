@@ -5,5 +5,6 @@ CREATE TABLE IF NOT EXISTS task (
     version INTEGER DEFAULT 0,
     create_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     complete_date TIMESTAMP,
+    promise_date TIMESTAMP,
     priority VARCHAR(50) NOT NULL DEFAULT 'MEDIUM'
 );
