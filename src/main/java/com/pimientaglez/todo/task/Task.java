@@ -1,21 +1,28 @@
-package com.pimientaglez.todo.task;
+    package com.pimientaglez.todo.task;
 
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.Version;
+    import java.time.LocalDateTime;
 
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
+    import org.springframework.data.annotation.Id;
+    import org.springframework.data.annotation.Version;
 
-public record Task (
-    @Id
-    Integer id,
-    @NotEmpty
-    String  title,
-    @NotNull
-    Status status,
-    @Version
-    Integer version 
-){
+    import jakarta.validation.constraints.NotEmpty;
+    import jakarta.validation.constraints.NotNull;
 
-}
+    public record Task (
+        @Id
+        Integer id,
+        @NotEmpty
+        String  title,
+        @NotNull
+        Status status,
+        @Version
+        Integer version,
+        @NotNull
+        LocalDateTime createDate,
+        LocalDateTime completeDate,
+        @NotNull
+        Priority priority
+    ){
+
+    }
