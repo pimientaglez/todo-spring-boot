@@ -3,102 +3,162 @@
     {
       "title": "Complete React project setup",
       "status": "ARCHIVED",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-03-27T10:00:00Z",
+      "complete_date": null,
+      "priority": "MEDIUM"
     },
     {
       "title": "Review the latest sprint report",
       "status": "PENDING",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-20T14:30:00Z",
+      "complete_date": null,
+      "priority": "HIGH"
     },
     {
       "title": "Write unit tests for task repository",
       "status": "COMPLETED",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-10T09:00:00Z",
+      "complete_date": "2025-04-15T16:00:00Z",
+      "priority": "MEDIUM"
     },
     {
       "title": "Implement user authentication",
       "status": "COMPLETED",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-03-30T11:00:00Z",
+      "complete_date": "2025-04-05T17:00:00Z",
+      "priority": "HIGH"
     },
     {
       "title": "Fix UI bugs on mobile version",
       "status": "COMPLETED",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-12T08:00:00Z",
+      "complete_date": "2025-04-14T15:00:00Z",
+      "priority": "HIGH"
     },
     {
       "title": "Add documentation for API endpoints",
       "status": "COMPLETED",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-01T10:00:00Z",
+      "complete_date": "2025-04-07T12:00:00Z",
+      "priority": "LOW"
     },
     {
       "title": "Refactor code to follow SOLID principles",
       "status": "PENDING",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-18T13:00:00Z",
+      "complete_date": null,
+      "priority": "MEDIUM"
     },
     {
       "title": "Prepare database migration for version 2",
       "status": "COMPLETED",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-03T09:30:00Z",
+      "complete_date": "2025-04-08T14:00:00Z",
+      "priority": "MEDIUM"
     },
     {
       "title": "Conduct peer review for new feature branch",
       "status": "ARCHIVED",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-03-25T15:00:00Z",
+      "complete_date": null,
+      "priority": "MEDIUM"
     },
     {
       "title": "Setup Docker containers for local development",
       "status": "PENDING",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-22T10:00:00Z",
+      "complete_date": null,
+      "priority": "MEDIUM"
     },
     {
       "title": "Integrate Stripe payment gateway",
       "status": "COMPLETED",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-05T11:00:00Z",
+      "complete_date": "2025-04-10T16:00:00Z",
+      "priority": "HIGH"
     },
     {
       "title": "Create design for the new landing page",
       "status": "PENDING",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-19T12:00:00Z",
+      "complete_date": null,
+      "priority": "MEDIUM"
     },
     {
       "title": "Fix bug in task filtering logic",
       "status": "PENDING",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-23T09:00:00Z",
+      "complete_date": null,
+      "priority": "HIGH"
     },
     {
       "title": "Update dependencies in backend project",
       "status": "ARCHIVED",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-03-28T14:00:00Z",
+      "complete_date": null,
+      "priority": "LOW"
     },
     {
       "title": "Write documentation for API testing",
       "status": "PENDING",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-21T11:00:00Z",
+      "complete_date": null,
+      "priority": "LOW"
     },
     {
       "title": "Create wireframes for new feature",
       "status": "PENDING",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-17T10:00:00Z",
+      "complete_date": null,
+      "priority": "MEDIUM"
     },
     {
       "title": "Set up monitoring for production environment",
       "status": "COMPLETED",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-02T08:00:00Z",
+      "complete_date": "2025-04-06T13:00:00Z",
+      "priority": "HIGH"
     },
     {
       "title": "Plan and schedule sprint retrospective meeting",
       "status": "ARCHIVED",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-03-26T16:00:00Z",
+      "complete_date": null,
+      "priority": "MEDIUM"
     },
     {
       "title": "Investigate performance issue on user dashboard",
       "status": "PENDING",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-04-24T15:00:00Z",
+      "complete_date": null,
+      "priority": "HIGH"
     },
     {
       "title": "Test new feature in staging environment",
       "status": "ARCHIVED",
-      "version": 0
+      "version": 0,
+      "create_date": "2025-03-29T12:00:00Z",
+      "complete_date": null,
+      "priority": "MEDIUM"
     }
   ]
 }
