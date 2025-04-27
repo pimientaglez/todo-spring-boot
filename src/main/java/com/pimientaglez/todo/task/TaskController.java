@@ -55,4 +55,8 @@ class TaskController {
     List<Task> findByStatus(@RequestParam Status status) {
         return TaskRepository.findAllByStatus(status);
     }
+    @GetMapping("/by-priority")
+    List<Task> findByPriority(@RequestParam Priority priority) {
+        return TaskRepository.findAllByPriority(priority);
+    }
 }

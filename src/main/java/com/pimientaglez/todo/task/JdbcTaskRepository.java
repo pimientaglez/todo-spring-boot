@@ -101,5 +101,11 @@ public class JdbcTaskRepository implements TaskRepository {
                 .query(Task.class)
                 .list();
     }
+    public List<Task> findAllByPriority(Priority priority) {
+        return jdbcClient.sql("select * from task where priority = :priority")
+                .param("priority", priority.toString())
+                .query(Task.class)
+                .list();
+    }
 
 }
